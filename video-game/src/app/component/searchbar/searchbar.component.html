@@ -1,0 +1,79 @@
+
+  <div *ngIf="filtersLoaded | async" class="{{pokemons[0].Type1.toLowerCase()}}">
+  <h1 style="visibility: visible; text-align: center;">Hello! Pokédex Activated!</h1>
+  <fieldset style="text-align: center;" style="visibility: visible; text-align: center; margin: .5cm 3cm .5cm 3cm;">
+    <input type="number" placeholder="Put in an Id to search!" [(ngModel)]="this.numSearch">
+    <button type="submit" class="btn-btn" (click)='findId(numSearch)'>Submit ID Search!</button>
+    <br/>
+    <input type="text" placeholder="Which Pokemon name?" [(ngModel)]="this.idSearch">
+    <button type="submit" class="btn-btn" (click)='findName(idSearch)'>Submit Name Search!</button>
+  </fieldset>
+  <fieldset name="list-pokemon" style="visibility: visible; text-align: center; margin: .5cm 2cm .5cm 2cm;" >
+    <h3 *ngIf="filtersLoaded | async" style="text-align: center;">{{pokemons[pokemons.length -1].Name}}</h3>
+    <h3 *ngIf="filtersLoaded | async" style="text-align: center;">{{pokemons[pokemons.length -1].Type1}} {{pokemons[pokemons.length -1].Type2}}</h3>
+    <h3 *ngIf="filtersLoaded | async" style="text-align: center;">Poke#: {{pokemons[pokemons.length -1].PokeId}}</h3>
+    <!-- <div class="visible"  (mouseenter)="hover=true" (mouseleave)="hover=false"> -->
+      <!-- <button class="btn-btn" (mouseover)='switchDisplay()'>MAGIC!</button> -->
+      <div class="spritesdefault" *ngIf="!this.dataserv.displayShiny" (mouseleave)='switchDisplay()'>
+        <img *ngIf="filtersLoaded | async" class="photofront" src="{{pokemons[pokemons.length -1].SpritesFrontDefault}}" />
+        <img *ngIf="filtersLoaded | async" class="photoback" src="{{pokemons[pokemons.length -1].SpritesBackDefault}}" />
+      </div>
+      <div class="spritesshiny" *ngIf="this.dataserv.displayShiny" (mouseleave)='switchDisplay()'>
+        <img *ngIf="filtersLoaded | async" class="photofront" src="{{pokemons[pokemons.length -1].SpritesFrontShiny}}" />
+        <img *ngIf="filtersLoaded | async" class="photoback" src="{{pokemons[pokemons.length -1].SpritesBackShiny}}" />
+      </div>
+    </fieldset>
+    <fieldset name="list-pokemon" style="visibility: visible; text-align: center; margin: .5cm .5cm .5cm .5cm;" >
+      <h2 *ngIf="filtersLoaded | async" style="text-align: center;">Select your Pokémon abilities!</h2>
+      <select [(ngModel)]="ability1" *ngIf="filtersLoaded | async" class="dropdown" style="visibility: visible; ">
+        <option selected disabled hidden value="">{{selectedProject}}</option>
+        <option *ngFor="let m of pokemons[0].Moves">{{m.move.name.toUpperCase()}}</option>
+      </select>
+      <select [(ngModel)]="ability2" *ngIf="filtersLoaded | async" class="dropdown" style="visibility: visible;">
+        <option selected disabled hidden value="">Choose an ability</option>
+        <option *ngFor="let m of pokemons[0].Moves">{{m.move.name.toUpperCase()}}</option>
+      </select>
+      <select [(ngModel)]="ability3" *ngIf="filtersLoaded | async" class="dropdown" style="visibility: visible;">
+        <option *ngFor="let m of pokemons[0].Moves">{{m.move.name.toUpperCase()}}</option>
+      </select>
+      <select [(ngModel)]="ability4" *ngIf="filtersLoaded | async" class="dropdown" style="visibility: visible;">
+        <option *ngFor="let m of pokemons[0].Moves">{{m.move.name.toUpperCase()}}</option>
+      </select>
+      <br/>
+      <button type="submit" class="btn-btn" style="text-align: center;" (click)='findMoves(ability1, ability2, ability3, ability4)'>Choose these 4!</button>
+      <br/>
+      <div class="flex">
+      <fieldset *ngIf="filtersLoaded2 | async" class="abilities">
+        <legend *ngIf="filtersLoaded2 | async">{{this.moves[5].Move}}</legend>
+        <h5 *ngIf="filtersLoaded2 | async">Accuracy: {{this.moves[5].Accuracy}}</h5>
+        <h5 *ngIf="filtersLoaded2 | async">Type: {{this.moves[5].Type}}</h5>
+        <h5 *ngIf="filtersLoaded2 | async">Power: {{this.moves[5].Power}}</h5>
+        <h5 *ngIf="filtersLoaded2 | async">PP:{{this.moves[5].PPnumber}}</h5>
+      </fieldset>
+      <fieldset *ngIf="filtersLoaded2 | async" class="abilities">
+        <legend *ngIf="filtersLoaded2 | async">{{this.moves[6].Move}}</legend>
+        <h5 *ngIf="filtersLoaded2 | async">Accuracy: {{this.moves[6].Accuracy}}</h5>
+        <h5 *ngIf="filtersLoaded2 | async">Type: {{this.moves[6].Type}}</h5>
+        <h5 *ngIf="filtersLoaded2 | async">Power: {{this.moves[6].Power}}</h5>
+        <h5 *ngIf="filtersLoaded2 | async">PP:{{this.moves[6].PPnumber}}</h5>
+      </fieldset>
+      <fieldset *ngIf="filtersLoaded2 | async" class="abilities">
+        <legend *ngIf="filtersLoaded2 | async">{{this.moves[7].Move}}</legend>
+        <h5 *ngIf="filtersLoaded2 | async">Accuracy: {{this.moves[7].Accuracy}}</h5>
+        <h5 *ngIf="filtersLoaded2 | async">Type: {{this.moves[7].Type}}</h5>
+        <h5 *ngIf="filtersLoaded2 | async">Power: {{this.moves[7].Power}}</h5>
+        <h5 *ngIf="filtersLoaded2 | async">PP:{{this.moves[7].PPnumber}}</h5>
+      </fieldset>
+      <fieldset *ngIf="filtersLoaded2 | async" class="abilities">
+        <legend *ngIf="filtersLoaded2 | async">{{this.moves[8].Move}}</legend>
+        <h5 *ngIf="filtersLoaded2 | async">Accuracy: {{this.moves[8].Accuracy}}</h5>
+        <h5 *ngIf="filtersLoaded2 | async">Type: {{this.moves[8].Type}}</h5>
+        <h5 *ngIf="filtersLoaded2 | async">Power: {{this.moves[8].Power}}</h5>
+        <h5 *ngIf="filtersLoaded2 | async">PP:{{this.moves[8].PPnumber}}</h5>
+      </fieldset>
+    </div>
+  </fieldset>
+<br/>
+</div>
+
+

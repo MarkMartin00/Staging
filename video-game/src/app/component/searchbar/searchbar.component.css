@@ -1,0 +1,239 @@
+.photofront {
+  background-color: rgba(0, 0, 0, 0.568);
+  border: #c2bfbf solid;
+  border-radius: 1cm;
+  margin-right: 5px;
+  width: 25%;
+  height: 25%;
+  float: center;
+}
+.photoback {
+  background-color: rgba(0, 0, 0, 0.568);
+  border: #c2bfbf solid;
+  border-radius: 1cm;
+  margin-left: 5px;
+  width: 25%;
+  height: 25%;
+  float: center;
+}
+select:invalid {
+  color: rgb(3, 3, 3);
+}
+.spritesdefault {
+  text-align: center;
+}
+.spritesshiny {
+  text-align: center;
+}
+/* #photofront:hover {
+  width: 30%;
+  height: 30%;
+}
+#photoback:hover {
+  width: 30%;
+  height: 30%;
+} */
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.spritesdefault {
+  padding: 1cm;
+}
+.spritesshiny {
+  padding: 1cm;
+}
+.dropdown{
+  Background-color: rgb(119, 114, 114);
+  margin: 1mm;
+}
+.abilities {
+  background-color: rgba(0, 0, 0, 0.568);
+  max-width: 20%; min-width: 20%; height: 225px;
+  float: center;
+  margin: 0cm .10cm 0cm .10cm;
+  border-radius: 1cm;
+  position: static;
+}
+
+.normal {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;    color: rgb(255, 255, 255); font-weight: 900;
+  background-repeat: repeat;   background-position: top;
+  text-shadow: 2px 1px #fc0505;
+  background-color: black;
+  background-image: url(../../../assets/normal.jpg);
+}
+.bug {
+  font-family: Arial, Helvetica, sans-serif; background-size: 75%;
+  font-size: large;   font-weight: 900;
+  background-repeat: repeat;  background-position: top;
+  color: rgb(53, 32, 32); text-shadow: 2px 1px #ff0000;
+  background-color: darkolivegreen; background-size: 75%;
+  background-image: url(../../../assets/bug.jpg);
+
+}
+.dark {
+  font-family: Arial, Helvetica, sans-serif; background-size: 75%;
+  font-size: large;   font-weight: 900;
+  background-repeat: repeat;  background-position: top;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;    color: rgb(224, 231, 231); font-weight: 900;
+  background-repeat: repeat;    background-position: top;
+  text-shadow: 2px 1px #dd3cd5;
+  background-color: rgb(0, 0, 0); background-size: 75%;
+  background-image: url(../../../assets/dark.jpg);
+
+}
+.dragon {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;    color: rgb(1, 136, 46); font-weight: 900;
+  background-repeat: repeat;    background-position: top;
+  text-shadow: 2px 1px #d1a924;
+  background-color: rgb(9, 10, 6); background-size: 75%;
+  background-image: url(../../../assets/dragon.jpg);
+
+}
+
+.electric {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;    color: rgb(255, 255, 255); font-weight: 900;
+  background-repeat: repeat;    background-position: top;
+  text-shadow: 2px 1px #95a002;
+  background-color: rgb(42, 48, 138); background-size: 99%;
+  background-image: url(../../../assets/electric.png);
+
+}
+
+.fairy {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;     color: rgb(54, 2, 85); font-weight: 900;
+  background-repeat: repeat;    background-position: top;
+  text-shadow: 2px 1px #ffffff;
+  background-color: rgb(108, 29, 116); background-size: 75%;
+  background-image: url(../../../assets/fairy.jpg);
+
+}
+
+.fighting {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;     color: rgb(0, 22, 216); font-weight: 900;
+  background-repeat: repeat;    background-position: top;
+  text-shadow: 2px 1px #8fadad;
+  background-color: rgb(90, 77, 19); background-size: 75%;
+  background-image: url(../../../assets/fighting.jpg);
+
+}
+
+.fire {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;     color: rgb(255, 251, 23); font-weight: 900;
+  background-repeat: repeat;    background-position: top;
+  text-shadow: 2px 1px #4f9745;
+  background-color: rgb(204, 58, 0); background-size: 75%;
+  background-image: url(../../../assets/fire.jpg);
+
+}
+
+.flying {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;     color: rgb(41, 26, 126); font-weight: 900;
+  background-repeat: repeat;    background-position: top;
+  text-shadow: 2px 1px #ff0000;
+  background-color: rgb(174, 235, 253); background-size: 75%;
+  background-image: url(../../../assets/flying.png);
+
+}
+
+.ghost {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;     color: rgb(204, 6, 6); font-weight: 900;
+  background-repeat: repeat;    background-position: top;
+  text-shadow: 2px 1px #f8f6f6;
+  background-color: rgb(72, 15, 78); background-size: 75%;
+  background-image: url(../../../assets/ghost.jpg);
+
+}
+
+.grass {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;  color: rgb(178, 49, 230); font-weight: 900;
+  background-repeat: repeat;    background-position: top;
+  text-shadow: 2px 1px #fdfcfc;
+  background-color: rgb(19, 49, 13); background-size: 75%;
+  background-image: url(../../../assets/grass.jpg);
+}
+
+.ground {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;     color: rgb(135, 230, 26); font-weight: 900;
+  background-repeat: repeat;    background-position: top;
+  text-shadow: 2px 1px #1900ff;
+  background-color: rgb(108, 29, 116); background-size: 75%;
+  background-image: url(../../../assets/ground.jpg);
+
+}
+
+.ice {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;     color: rgb(243, 10, 10); font-weight: 800;
+  background-repeat: repeat;    background-position: top;
+  text-shadow: 2px 1px #e8e9e3;
+  background-color: rgb(54, 103, 238); background-size: 75%;
+  background-image: url(../../../assets/ice.png);
+
+}
+
+.poison {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large; color: rgb(211, 240, 47); font-weight: 900;
+  background-repeat: repeat;    background-position: top;
+  text-shadow: 2px 1px #ff0000;
+  background-color: rgb(65, 9, 71); background-size: 75%;
+  background-image: url(../../../assets/poison.jpg);
+
+}
+
+.psychic {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;     color: rgb(119, 255, 107); font-weight: 900;
+  background-repeat: repeat;    background-position: top;
+  text-shadow: 2px 1px #ff0000;
+  background-color: rgb(43, 19, 46); background-size: 75%;
+  background-image: url(../../../assets/psychic.png);
+
+}
+
+.rock {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;     color: rgb(250, 250, 250); font-weight: 900;
+  background-repeat: repeat;    background-position: top;
+  text-shadow: 2px 1px #5e5f0a;
+  background-color: rgb(97, 97, 97); background-size: 75%;
+  background-image: url(../../../assets/rock.png);
+
+}
+
+.steel {
+  font-family: Arial, Helvetica, sans-seriff;
+  font-size: large;     color: rgb(134, 1, 1); font-weight: 900;
+  background-repeat: repeat;    background-position: top;
+  text-shadow: 2px 1px #ff0000;
+  background-color: rgb(54, 54, 54); background-size: 99%;
+  background-image: url(../../../assets/steel.jpg);
+
+}
+
+.water {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;     color: rgb(185, 2, 2); font-weight: 800;
+  background-repeat: repeat;    background-position: top;
+  text-shadow: 2px 1px #a6b93a;
+  background-color: rgb(78, 90, 92); background-size: 99%;
+  background-image: url(../../../assets/water.jpg);
+
+}

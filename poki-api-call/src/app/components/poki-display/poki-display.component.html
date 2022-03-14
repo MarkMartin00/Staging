@@ -1,0 +1,8 @@
+<div>
+  <Form id="findpoki">
+    <input type="number" placeholder="Put in an Id to search!" [(ngModel)="numSearch"]>
+    <button type="submit" id="btn-btn" (click)='findId(numSearch)'>Submit ID Search!</button>
+    <input type="text" placeholder="What's the name of the Pokemon you want to look up?" [(ngModel)="idSearch"]>
+    <button type="submit" id="btn-btn" (click)='findName(idSearch)'>Submit Name Search!</button>
+  </Form>
+</div>
