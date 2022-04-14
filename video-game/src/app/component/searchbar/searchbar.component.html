@@ -1,5 +1,5 @@
-
-  <div *ngIf="filtersLoaded | async" class="{{pokemons[0].Type1.toLowerCase()}}">
+<div *ngIf="filtersLoaded | async" class="{{pokemons[0].Type1.toLowerCase()}}">
+    <br/>
   <h1 style="visibility: visible; text-align: center;">Hello! Pokédex Activated!</h1>
   <fieldset style="text-align: center;" style="visibility: visible; text-align: center; margin: .5cm 3cm .5cm 3cm;">
     <input type="number" placeholder="Put in an Id to search!" [(ngModel)]="this.numSearch">
@@ -25,18 +25,18 @@
     </fieldset>
     <fieldset name="list-pokemon" style="visibility: visible; text-align: center; margin: .5cm .5cm .5cm .5cm;" >
       <h2 *ngIf="filtersLoaded | async" style="text-align: center;">Select your Pokémon abilities!</h2>
-      <select [(ngModel)]="ability1" *ngIf="filtersLoaded | async" class="dropdown" style="visibility: visible; ">
-        <option selected disabled hidden value="">{{selectedProject}}</option>
+      <select [(ngModel)]="ability1" *ngIf="filtersLoaded | async" class="dropdown" >
+        <option selected value="Option1">Choose an ability</option>
         <option *ngFor="let m of pokemons[0].Moves">{{m.move.name.toUpperCase()}}</option>
       </select>
-      <select [(ngModel)]="ability2" *ngIf="filtersLoaded | async" class="dropdown" style="visibility: visible;">
-        <option selected disabled hidden value="">Choose an ability</option>
+      <select [(ngModel)]="ability2" *ngIf="filtersLoaded | async" class="dropdown">
+        <option disabled value="">Choose an ability</option>
         <option *ngFor="let m of pokemons[0].Moves">{{m.move.name.toUpperCase()}}</option>
       </select>
-      <select [(ngModel)]="ability3" *ngIf="filtersLoaded | async" class="dropdown" style="visibility: visible;">
+      <select [(ngModel)]="ability3" *ngIf="filtersLoaded | async" class="dropdown">
         <option *ngFor="let m of pokemons[0].Moves">{{m.move.name.toUpperCase()}}</option>
       </select>
-      <select [(ngModel)]="ability4" *ngIf="filtersLoaded | async" class="dropdown" style="visibility: visible;">
+      <select [(ngModel)]="ability4" *ngIf="filtersLoaded | async" class="dropdown">
         <option *ngFor="let m of pokemons[0].Moves">{{m.move.name.toUpperCase()}}</option>
       </select>
       <br/>

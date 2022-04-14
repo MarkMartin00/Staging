@@ -12,7 +12,9 @@ const url = apiUrl;
 
 
 export class DataServiceService {
-
+  pokemons: PokemonModel[] = [];
+  moves: PokemonMoves[] = [];
+  displayShiny: Boolean = false;
 
   constructor(private httpclient: HttpClient) {
     this.pokemons = [];
