@@ -1,0 +1,56 @@
+package com.revature;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+
+public class RepeatString {
+	public static int repeatString(List<String> abc) {
+	
+		int result = 1;
+		int testNumberForReturn = 0;
+		List<String> finish = new LinkedList<String>();
+		
+		for (int i = 0; i < abc.size(); i++) {
+				String temp = "xyz";
+				
+				try {
+					temp = abc.get(i + 1);
+				} catch (IndexOutOfBoundsException xyz) {
+					
+				}
+				if (temp.equalsIgnoreCase(abc.get(i))) {
+					result++;
+					testNumberForReturn++;
+						
+				} else if (!temp.equalsIgnoreCase(abc.get(i))){
+					finish.add(abc.get(i));
+					finish.add(Integer.toString(result));
+					result = 1;
+				} 
+		}
+		if (testNumberForReturn > 0) {
+			System.out.println("Finish: " + "\n" + finish);
+		} else {
+			System.out.println("INstructed to return original string: " + "\n" + abc);
+		}
+		return result;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int T = sc.nextInt();
+		List<String> abc = new ArrayList<String>(T);
+		
+		for (int i = 0; i < T; i++) {
+			System.out.println("index of "+ i);
+			abc.add(sc.next());
+		}
+		
+		sc.close();
+
+		repeatString(abc);
+	}
+}
