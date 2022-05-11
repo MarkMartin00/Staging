@@ -54,7 +54,7 @@ public class LoopDetection {
 		for (int i = 1; i <= t; i++) {
 			System.out.println("What's at index "+ i);
 			String x = sc.next();
-			list2[i] = new ListNode(x);
+//			list2[i] = new ListNode(x);
 		}
 		sc.close();
 		return null;
@@ -66,7 +66,7 @@ public class LoopDetection {
 		for (int i = 1; i <= t; i++) {
 			System.out.println("What's at index "+ i);
 			String x = sc.next();
-			list1[i] = new ListNode(x);
+//			list1[i] = new ListNode(x);
 		}
 		sc.close();
 		return null;
