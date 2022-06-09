@@ -1,17 +1,16 @@
 package com.revature;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 import java.util.SortedSet;
 import java.util.TreeSet;
+import java.sql.Timestamp;
 
 public class MagicIndexTransform {
+	
 	public static int multiplyTimes(int n, List<Integer> arr) {
-        
         int result = -404;
         
 //      1) Magic Index: A magic index in an array A [ 0 ... n -1] is defined 
@@ -28,7 +27,7 @@ public class MagicIndexTransform {
         
 //      2) Power Set: Write a method to return all subsets of a set.
         sub = distinct.subSet(1, 10000);
-        System.out.println("The subArray* of Real NUmbers is/are: "+ "\n" + sub);
+        System.out.println("The subArray* of Real Numbers is/are: "+ "\n" + sub);
         
         
         int thisTotal = 0;
@@ -39,7 +38,9 @@ public class MagicIndexTransform {
         		thisTotal = multiplyList(thisTotal, b);
         	}
         }
-        System.out.println("The total is: " + thisTotal);
+        Long datetime = System.currentTimeMillis();
+        Timestamp timestamp = new Timestamp(datetime);
+        System.out.println("The total is: " + thisTotal + "\n" + " @ time: " + timestamp);
         
         return result;
     }
@@ -74,7 +75,9 @@ public class MagicIndexTransform {
 
 		}	
 		scan.close();
-		
+		Long datetime = System.currentTimeMillis();
+        Timestamp timestamp = new Timestamp(datetime);
+        System.out.println(timestamp);
 		Collections.sort(arr);
 		
 		multiplyTimes(n, arr);

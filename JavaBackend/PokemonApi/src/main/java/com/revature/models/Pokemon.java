@@ -1,6 +1,8 @@
-package com.revature.controller;
+package com.revature.models;
 
 import java.util.Objects;
+
+
 
 public class Pokemon {
 
@@ -41,7 +43,7 @@ public class Pokemon {
 	}
 
 	//Getters and Setters -------------------------------------------------------------------------------------------
-	public long getPokeId() {
+	public long getPokeId(int i) {
 		return pokeId;
 	}
 	public String getName() {

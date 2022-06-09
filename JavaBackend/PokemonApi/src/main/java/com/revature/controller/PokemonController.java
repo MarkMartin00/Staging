@@ -6,18 +6,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.revature.models.Pokemon;
+
 @RestController
 public class PokemonController {
 
 	private static final String template = "Hello, %s!";
-	private final AtomicLong counter = new AtomicLong();
+	private final AtomicLong counter = new AtomicLong(); //setting id
 	
-	@GetMapping("/Pokemon")
+	@GetMapping("/pokemon")
 	public Pokemon pokemon(@RequestParam(value = "name", defaultValue = "World") String name) {
+		return null;
+		
+		
 		//this is not correct and needs to be corrected.
-		return new Pokemon(0, name, name, name, name, name, name, name, name, name);
+	
+//		return new Pokemon(counter.incrementAndGet(),String.format(template, name), 
+//				pokeId, type1, type2, moves, stats, spritesFrontDefault, spritesBackDefault,
+//				spritesFrontShiny, spritesBackShiny);
 	}
-	
-	
 	
 }
