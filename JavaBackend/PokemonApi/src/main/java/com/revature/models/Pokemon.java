@@ -2,10 +2,17 @@ package com.revature.models;
 
 import java.util.Objects;
 
+import javax.persistence.Entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
 
+@Data @AllArgsConstructor
+@Entity
 public class Pokemon {
 
+	
 	private final long pokeId;
 	private final String name;
 	private final String type1;

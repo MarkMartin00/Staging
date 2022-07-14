@@ -1,9 +1,16 @@
 package com.revature.models;
 
 import java.util.Objects;
+import javax.persistence.Entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data @AllArgsConstructor
+@Entity
 public class PokemonMoves {
 
+	
 	private final String move;
 	private final String accuracy;
 	private final String type;
@@ -16,7 +23,7 @@ public class PokemonMoves {
 	private final String shortEffect;
 	
 	//Constructor ------------------------------------------------------------------------------------------------------
-	public PokemonMoves(String move, String accuracy, String type, int power, int ppNumber, int priority, String target,
+	private PokemonMoves(String move, String accuracy, String type, int power, int ppNumber, int priority, String target,
 			float effectChance, String effect, String shortEffect) {
 		super();
 		this.move = move;
